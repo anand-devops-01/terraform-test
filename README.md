@@ -1,34 +1,48 @@
-# Terraform Resource Group Project
+# Topic 01: End-to-End Azure Infrastructure Deployment (Hardcoded)
 
-This project demonstrates how to create an Azure Resource Group using Terraform.
+![Terraform](https://img.shields.io/badge/Terraform-IaC-blueviolet?style=for-the-badge&logo=terraform)
+![Azure](https://img.shields.io/badge/Microsoft_Azure-Cloud-blue?style=for-the-badge&logo=microsoftazure)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+![Infrastructure](https://img.shields.io/badge/Project-Azure_Infra-orange?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 ---
 
 ## 📌 Project Overview
 
-Terraform is an Infrastructure as Code (IaC) tool used to automate cloud infrastructure deployment.
-
-In this project:
-- Azure Provider is configured
-- Resource Group is created
-- Terraform commands are used for deployment
+In this project, I used Terraform to deploy a complete infrastructure flow on Azure. The goal was to understand the basic resource creation process and data upload to a storage service using a hardcoded configuration.
 
 ---
 
-## 🚀 Technologies Used
+## 🏗️ Resources Created
 
-- Terraform
-- Microsoft Azure
-- VS Code
-- Git & GitHub
+* **Resource Group:** A logical container named `prod-rg`.
+* **Storage Account:** A Standard LRS storage account named `prdstr`.
+* **Storage Container:** A private container named `prodcntr` for data storage.
+* **Storage Blob:** A local file (`demo.txt`) uploaded to the Azure container.
 
 ---
 
-## 📂 Project Structure
+## 📸 Deployment Proof
 
-```text
-terraform-test/
-│
-├── main.tf
-├── .gitignore
-└── README.md
+- Below is the screenshot from the Azure Portal verifying the successful deployment and file upload:
+
+![Azure Portal Screenshot](./hardcoded.png)
+
+---
+
+## 🛠️ Terraform Commands Used
+
+1. `terraform init`: Initialized the working directory and downloaded providers.
+2. `terraform plan`: Generated an execution plan to preview changes.
+3. `terraform apply`: Deployed the infrastructure and uploaded the blob.
+
+---
+
+## 💡 Key Learnings
+
+* Setting up the AzureRM Provider.
+* Understanding resource hierarchy and dependencies in Azure.
+* Basic state management and portal verification.
+
+---
